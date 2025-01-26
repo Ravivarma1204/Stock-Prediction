@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Prediction and Recommendation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Stock Prediction and Recommendation</h1>
+        <form action="/stock_details" method="post">
+            <label for="stock_symbol">Enter Stock Symbol:</label>
+            <input type="text" id="stock_symbol" name="stock_symbol" placeholder="e.g. AAPL" required>
+            
+            <div class="button-container">
+                <button type="submit" name="action" value="details">Get Stock Details</button>
+                <button type="submit" name="action" value="prediction">Get Prediction</button>
+                <button type="submit" name="action" value="recommendation">Get Recommendation</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

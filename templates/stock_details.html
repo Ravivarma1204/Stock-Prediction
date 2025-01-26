@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Details for {{ stock_name }}</h1>
+    </header>
+
+    <div class="stock-details-container">
+        {% if details %}
+            <ul class="details-list">
+                {% for key, value in details.items() %}
+                    <li class="detail-item">
+                        <strong>{{ key }}:</strong> 
+                        {% if value %}
+                            {{ value }}
+                        {% else %}
+                            <span class="not-available">Not Available</span>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No details available for the selected stock.</p>
+        {% endif %}
+    </div>
+
+    <footer>
+        <a href="/">Go Back</a>
+    </footer>
+</body>
+</html>

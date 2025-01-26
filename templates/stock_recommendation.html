@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Recommendation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Stock Recommendation for {{ stock_symbol }}</h1>
+        
+        <!-- Display error message if any -->
+        {% if error %}
+            <div class="error-message">
+                <p>{{ error }}</p>
+            </div>
+        {% endif %}
+        
+        <!-- Display stock data and recommendation if available -->
+        {% if stock_symbol %}
+            <div class="stock-info">
+                <h2>Stock Symbol: <strong>{{ stock_symbol }}</strong></h2>
+                <p><strong>Last Close Price:</strong> {{ last_close }}</p>
+                <p><strong>50-Day Moving Average:</strong> {{ moving_avg }}</p>
+                <p><strong>Recommendation:</strong> <span class="recommendation">{{ recommendation }}</span></p>
+                <p><strong>Confidence Score:</strong> <span class="confidence">{{ confidence_score }}%</span></p>
+
+                <!-- Recommendation Logic -->
+                <ul>
+                    <li><strong>Recommendation Logic:</strong> 
+                        The recommendation is based on the stock's performance compared to its 50-day moving average and recent volume changes. 
+                        <ul>
+                            <li>- If the stock's last closing price is higher than its moving average, a "Buy" recommendation is made.</li>
+                            <li>- If it's lower, a "Sell" recommendation is made.</li>
+                            <li>- If it's close to the moving average, the recommendation is to "Hold."</li>
+                        </ul>
+                    </li>
+                    <li><strong>Risk Assessment:</strong> 
+                        The risk level is determined by recent volume changes. 
+                        <ul>
+                            <li>- If volume is increasing, the risk is considered "Low."</li>
+                            <li>- If volume is decreasing, the risk is considered "High."</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        {% endif %}
+        
+        <footer>
+            <a href="/">Go Back</a>
+        </footer>
+    </div>
+</body>
+</html>

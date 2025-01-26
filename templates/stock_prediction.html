@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Stock Prediction for {{ stock_name }}</h1>
+
+        <p>The predicted stock price for <strong>{{ stock_name }}</strong> is: <strong>{{ predicted_price }}</strong></p>
+
+        <p><strong>Explanation:</strong></p>
+        <ul>
+            <li><strong>Prediction Source:</strong> The stock price prediction is based on a trained LSTM model that considers historical data to estimate future stock prices.</li>
+            <li><strong>Prediction Confidence:</strong> The model provides an estimate based on patterns detected in the data, but it is important to remember that stock prices can be influenced by various external factors, so the prediction may not always be accurate.</li>
+            <li><strong>Graph (optional enhancement):</strong> In the future, a graph of the predicted price trend can be added to visualize how the model's prediction compares to actual past stock prices.</li>
+        </ul>
+
+        <!-- Optional prediction graph (future enhancement) -->
+        <div class="prediction-graph">
+            <p><strong>Price Prediction Trend (Coming Soon):</strong></p>
+            <!-- Add graph here if available -->
+        </div>
+
+        <footer>
+            <a href="/">Go Back</a>
+        </footer>
+    </div>
+</body>
+</html>
