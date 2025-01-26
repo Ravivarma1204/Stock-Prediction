@@ -1,0 +1,184 @@
+/* Reset Box Sizing and Margin/Padding */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Global Body Styling */
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #e3e9f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+/* Container Styling */
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    transition: all 0.3s ease;
+}
+
+.container:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+/* Header Styling */
+header h1 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Form and Input Field Styling */
+form {
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    padding: 12px;
+    width: 100%;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #4CAF50;
+}
+
+/* Button Container Styling */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Button Styling */
+.button-container button {
+    padding: 12px 25px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.button-container button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.button-container button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.3);
+}
+
+.button-container button:active {
+    background-color: #3e8e41;
+}
+
+/* Stock Info Styling */
+.stock-info {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.stock-info h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.stock-info p {
+    font-size: 18px;
+    margin: 8px 0;
+}
+
+.recommendation {
+    font-weight: bold;
+    font-size: 20px;
+    color: #4CAF50;
+}
+
+.confidence {
+    font-weight: bold;
+    font-size: 20px;
+    color: #FF9800;
+}
+
+/* Error Message Styling */
+.error-message {
+    background-color: #f44336;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+}
+
+/* Details List Styling */
+.details-list {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+.detail-item {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.not-available {
+    color: #e74c3c;
+}
+
+/* Footer Styling */
+footer {
+    margin-top: 30px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-size: 16px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+
+    .button-container button {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
