@@ -1,8 +1,8 @@
 flask
-keras
-tensorflow
 numpy
 yfinance
 pandas
 matplotlib
 scikit-learn
+tensorflow==2.6.0
+keras==2.6.0
