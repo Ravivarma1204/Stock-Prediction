@@ -26,10 +26,6 @@ def calculate_moving_average(stock_symbol, days=50):
 
 # Function to get stock recommendation
 def get_recommendation(stock_symbol):
-    # Here you can implement your actual recommendation logic
-    # For simplicity, we'll use random data for the recommendation and confidence
-    # You can replace this with your own logic (e.g., LSTM, technical indicators)
-    
     recommendation = "Buy"  # Example: replace with actual recommendation logic
     confidence_score = 90  # Example: replace with actual confidence logic
     return recommendation, confidence_score
